@@ -1,0 +1,19 @@
+import QmlProject 1.1
+
+Project {
+	mainUiFile: "Friends.ui.qml"
+
+	QmlFiles {
+		directory: "."
+	}
+
+	Environment {
+		QMLSCENE_CORE_PROFILE: "true"
+	}
+
+	qdsVersion: "3.9"
+	quickVersion: "2.15"
+	multilanguageSupport: true
+	supportedLanguages: ["en", "id"]
+	primaryLanguage: "en"
+}
