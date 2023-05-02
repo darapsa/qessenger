@@ -1,5 +1,6 @@
 <!DOCTYPE RCC><RCC version="1.0">
 	<qresource prefix="qessenger">
+		<file>Card.ui.qml</file>
 		<file>Friends.ui.qml</file>
 	</qresource>
 </RCC>
