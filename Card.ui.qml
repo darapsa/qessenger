@@ -7,7 +7,9 @@ import Bootstrap 5.3
 Item {
 	property string imageSource:
 	"https://offsetcode.com/themes/messenger/2.2.0/assets/img/avatars/6.jpg"
+	property alias imageArea: imageArea
 	property string nameText: "Bill Marrow"
+	property alias nameArea: nameArea
 	property string statusText: qsTr("last seen 3 days ago")
 	implicitHeight: 88.5
 
@@ -39,8 +41,12 @@ Item {
 					radius: 22
 				}
 			}
-		}
 
+			MouseArea {
+				id: imageArea
+				anchors.fill: parent
+			}
+		}
 		ColumnLayout {
 			spacing: 0
 			anchors {
@@ -53,6 +59,11 @@ Item {
 				text: nameText
 				wrapMode: Label.Wrap
 				Bootstrap.heading: 5
+
+				MouseArea {
+					id: nameArea
+					anchors.fill: parent
+				}
 			}
 
 			Label {
