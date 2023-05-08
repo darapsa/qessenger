@@ -26,6 +26,7 @@ Flickable {
 
 		ListView {
 			id: list
+			Layout.fillWidth: true
 			interactive: false
 			implicitHeight: count * 88.5
 			model: ListModel {
