@@ -46,6 +46,8 @@ Flickable {
 				}
 			}
 			delegate: Card {
+				Bootstrap.mode: ApplicationWindow.window
+					.Bootstrap.mode
 				width: list.width
 				imageSource: image
 				nameText: name
