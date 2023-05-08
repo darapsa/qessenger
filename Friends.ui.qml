@@ -5,6 +5,7 @@ import Bootstrap 5.3
 
 Flickable {
 	property string titleText: qsTr("Friends")
+	property alias list: list
 	contentHeight: container.height + 28
 
 	ColumnLayout {
