@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.15
 import Bootstrap 5.3
 
 Flickable {
+	property string titleText: qsTr("Friends")
 	contentHeight: container.height + 28
 
 	ColumnLayout {
@@ -18,7 +19,7 @@ Flickable {
 		}
 
 		Label {
-			text: qsTr("Friends")
+			text: titleText
 			Bootstrap.heading: 2
 			Layout.bottomMargin: 28
 		}
