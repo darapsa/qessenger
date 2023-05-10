@@ -16,7 +16,7 @@ Page {
 	}
 
 	ListView {
-		id: list
+		id: listView
 		anchors {
 			fill: parent
 			leftMargin: 20
@@ -24,7 +24,7 @@ Page {
 		}
 		model: [ 11, 1, 6, 1, 11, 1, 7, 1, 11, 1]
 		delegate: Item {
-			implicitWidth: list.width
+			implicitWidth: listView.width
 			implicitHeight: column.height
 
 			ColumnLayout {
