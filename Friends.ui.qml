@@ -5,7 +5,7 @@ import Bootstrap 5.3
 
 Flickable {
 	property string titleText: qsTr("Friends")
-	property alias list: list
+	property alias listView: listView
 	contentHeight: container.height + 28
 
 	ColumnLayout {
@@ -26,7 +26,7 @@ Flickable {
 		}
 
 		ListView {
-			id: list
+			id: listView
 			Layout.fillWidth: true
 			interactive: false
 			implicitHeight: count * 88.5
@@ -50,7 +50,7 @@ Flickable {
 			delegate: Card {
 				Bootstrap.mode: ApplicationWindow.window
 					.Bootstrap.mode
-				width: list.width
+				width: listView.width
 				imageSource: image
 				nameText: name
 				statusText: status
