@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 import Bootstrap
 
 Item {
@@ -33,15 +33,21 @@ Item {
 				width: 44
 				height: 44
 			}
-			layer.enabled: true
-			layer.effect: OpacityMask {
-				maskSource: Rectangle {
-					width: 44
-					height: 44
-					radius: 22
+			layer {
+				enabled: true
+				effect: MultiEffect {
+					maskEnabled: true
+					maskSource: maskRectangle
 				}
 			}
-
+			Rectangle {
+				id: maskRectangle
+				width: 44
+				height: 44
+				radius: 22
+				layer.enabled: true
+				visible: false
+			}
 			MouseArea {
 				id: imageArea
 				anchors.fill: parent

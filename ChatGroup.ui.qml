@@ -1,7 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
-import Qt5Compat.GraphicalEffects
+import QtQuick.Effects
 
 Page {
 	property string titleText: qsTr("Bootstrap Community")
@@ -72,13 +72,18 @@ Page {
 				}
 				layer {
 					enabled: true
-					effect: OpacityMask {
-						maskSource: Rectangle {
-							width: 26
-							height: 26
-							radius: 13
-						}
+					effect: MultiEffect {
+						maskEnabled: true
+						maskSource: maskRectangle
 					}
+				}
+				Rectangle {
+					id: maskRectangle
+					width: 26
+					height: 26
+					radius: 13
+					layer.enabled: true
+					visible: false
 				}
 			}
 		}
